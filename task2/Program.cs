@@ -9,7 +9,7 @@ int.TryParse(Console.ReadLine()!, out n);
 Console.Write($"{PrintNumbers(m, n)}\n");
 
 int sum = 0;
-SumNumbers(m + 1, n);
+SumNumbers(m, n);
 Console.Write($"Cумма элементов в промежутке от M до N = {sum}\n");
 
 //---------------------------------------
@@ -24,7 +24,7 @@ string PrintNumbers(int first, int last)
 //---------------------------------------
 int SumNumbers(int first, int last)
 {
-    if (first >= last) 
+    if (first > last) 
         return sum;
     else
         return sum += first + SumNumbers(first + 1, last);
